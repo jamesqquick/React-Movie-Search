@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #c26ba9;
+    color: white;
+    color: rgba(0, 0, 0, 0.7);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    grid-gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card {
+    padding: 20px 40px;
+    border-radius: 3px;
+    display: flex;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.card--title {
+    margin-bottom: 5px;
+    font-size: 32px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card--image {
+    margin-right: 20px;
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.nav--brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav--items {
+    list-style: none;
+    display: flex;
+    padding-inline-start: none;
+}
+
+.nav--item {
+    text-decoration: none;
+}
+
+.nav--item:visited {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.nav--item {
+    margin-left: 10px;
+}
+
+input {
+    width: 100%;
+    font-size: 16px;
+    padding: 5px 20px;
+    line-height: 28px;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    transition: background-color 250ms;
+    border-radius: 3px;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 786px) {
+    .card {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
 }
