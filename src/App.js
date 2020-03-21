@@ -6,6 +6,7 @@ import FourOhFour from './pages/404';
 import Home from './pages/home';
 import Header from './components/header';
 import { useAuth0 } from './react-auth0-spa';
+import PrivateRoute from './components/privateRoute';
 
 function App() {
     const { loading } = useAuth0();
@@ -20,7 +21,7 @@ function App() {
                 <div className="container">
                     <Switch>
                         <Route path="/" exact={true} component={Home} />
-                        <Route path="/profile" component={Profile} />
+                        <PrivateRoute path="/profile" component={Profile} />
                         <Route path="/*" component={FourOhFour} />
                     </Switch>
                 </div>
