@@ -5,8 +5,14 @@ import Profile from './pages/profile';
 import FourOhFour from './pages/404';
 import Home from './pages/home';
 import Header from './components/header';
+import { useAuth0 } from './react-auth0-spa';
 
 function App() {
+    const { loading } = useAuth0();
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
     return (
         <Router>
             <div className="App">

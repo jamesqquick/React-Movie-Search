@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { useAuth0 } from '../react-auth0-spa';
 export default function Header() {
+    const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
     return (
         <nav className="nav">
             <div className="nav--brand">React Movie Search</div>
@@ -16,8 +17,14 @@ export default function Header() {
                         Profile
                     </Link>
                 </li>
-                <button className="nav--item">Log in</button>
-                <button className="nav--item">Log out</button>
+                {!isAuthenticated && (
+                    <button className="nav--item" onClick={loginWithRedirect}>
+                        Log in
+                    </button>
+                )}
+                {isAuthenticated && (
+                    <button className="nav--item">Log out</button>
+                )}
             </ul>
         </nav>
     );
