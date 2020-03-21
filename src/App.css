@@ -1,8 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #c26ba9;
-    color: white;
+    background-color: rgb(244, 244, 244);
     color: rgba(0, 0, 0, 0.7);
 }
 
@@ -54,6 +53,7 @@ body {
     list-style: none;
     display: flex;
     padding-inline-start: none;
+    align-items: center;
 }
 
 .nav--item {
@@ -79,10 +79,10 @@ input {
 }
 
 button {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     color: white;
     padding: 10px 20px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.7);
     transition: background-color 250ms;
     border-radius: 3px;
 }
@@ -92,7 +92,7 @@ form {
 }
 
 button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     cursor: pointer;
 }
 

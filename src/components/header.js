@@ -16,6 +16,8 @@ export default function Header() {
                         Profile
                     </Link>
                 </li>
+                <button className="nav--item">Log in</button>
+                <button className="nav--item">Log out</button>
             </ul>
         </nav>
     );
