@@ -12,18 +12,22 @@ export default function Header() {
                         Home
                     </Link>
                 </li>
-                <li>
-                    <Link className="nav--item" to="/profile">
-                        Profile
-                    </Link>
-                </li>
+                {isAuthenticated && (
+                    <li>
+                        <Link className="nav--item" to="/profile">
+                            Profile
+                        </Link>
+                    </li>
+                )}
                 {!isAuthenticated && (
                     <button className="nav--item" onClick={loginWithRedirect}>
                         Log in
                     </button>
                 )}
                 {isAuthenticated && (
-                    <button className="nav--item">Log out</button>
+                    <button className="nav--item" onClick={logout}>
+                        Log out
+                    </button>
                 )}
             </ul>
         </nav>
