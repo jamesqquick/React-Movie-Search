@@ -1,25 +1,15 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Profile from './pages/profile';
-import FourOhFour from './pages/404';
-import Home from './pages/home';
-import Header from './components/header';
+import SearchMovies from './components/searchMovies';
 
 function App() {
     return (
-        <Router>
-            <div className="App">
-                <Header />
-                <div className="container">
-                    <Switch>
-                        <Route path="/" exact={true} component={Home} />
-                        <Route path="/profile" component={Profile} />
-                        <Route path="/*" component={FourOhFour} />
-                    </Switch>
-                </div>
+        <div className="App">
+            <div className="container">
+                <h1 className="text-center">REACT MOVIE SEARCH</h1>
+                <SearchMovies />
             </div>
-        </Router>
+        </div>
     );
 }
 

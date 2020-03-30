@@ -1,3 +1,10 @@
+html {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
@@ -5,15 +12,43 @@ body {
     color: rgba(0, 0, 0, 0.7);
 }
 
+p {
+    font-size: 1.6rem;
+}
+
+small {
+    font-size: 1.2rem;
+}
+
+h1 {
+    font-size: 5.4rem;
+}
+
+.flash {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    border-radius: 3px;
+}
+
+.error {
+    background-color: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgb(220, 53, 69);
+}
+
+.info {
+    border: 1px solid rgb(0, 123, 255);
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
 .container {
-    padding: 20px;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 95vw;
 }
 
 .card-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 20px;
 }
 
@@ -37,68 +72,44 @@ body {
     object-fit: contain;
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.7);
+.text-center {
+    text-align: center;
 }
 
-.nav--brand {
-    font-size: 24px;
-    font-weight: bold;
-}
-.nav--items {
-    list-style: none;
-    display: flex;
-    padding-inline-start: none;
-    align-items: center;
+.label {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
 }
 
-.nav--item {
-    text-decoration: none;
+.input {
+    font-size: 1.6rem;
+    padding: 0.5rem 2rem;
+    line-height: 2.8rem;
+    border-radius: 20px;
+    border: 1px solid #ddd;
 }
 
-.nav--item:visited {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.nav--item {
-    margin-left: 10px;
-}
-
-input {
-    width: 100%;
-    font-size: 16px;
-    padding: 5px 20px;
-    line-height: 28px;
-    border: none;
-    border-radius: 3px;
-    margin-bottom: 10px;
-}
-
-button {
+.button {
     background-color: rgba(0, 0, 0, 0.75);
     color: white;
     padding: 10px 20px;
     border: 1px solid rgba(0, 0, 0, 0.7);
     transition: background-color 250ms;
-    border-radius: 3px;
+    border-radius: 20px;
+    font-size: 1.4rem;
 }
 
-form {
-    margin-bottom: 30px;
+.form {
+    max-width: 600px;
+    margin: 3rem auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
 }
 
-button:hover {
+.button:hover {
     background-color: rgba(0, 0, 0, 0.8);
     cursor: pointer;
-}
-
-@media only screen and (max-width: 786px) {
-    .card {
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
 }
